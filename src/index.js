@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // for navbar toggle
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import './index.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 
 
 import ScrollToTop from './components/ScrollToTop.js';
-import Header from './components/Header1.js';
-import Footer from './components/Footer1.js';
+// import Header from './components/Header1.js';
+// import Footer from './components/Footer1.js';
+import PublicLayout from "./layouts/PublicLayout";
+import AdminLayout from "./layouts/AdminLayout";
+
 import HomePage from './pages/home/HomePage.js';
 import ContactPage from './pages/contactUs/ContactPage.js';
 import ServicePage from './pages/service/ServicePage.js';
@@ -30,8 +34,18 @@ import MSOffice365 from './pages/service/MSOffice365.js';
 import BlogPage from './pages/Blog/BlogPage.js';
 import BlogDetauls from './pages/Blog/BlogDetails.js';
 
+// Admin blog pages
+import Login from './pages/admin/Login.js';
+import Dashboard from './pages/admin/Dashboard.js';
+import ProtectedRoute from './components/admin/ProtectedRoute.js';
+import BlogList from './pages/admin/BlogList.js';
+import CreateBlog from "./pages/admin/CreateBlog.js";
+import EditBlog from "./pages/admin/EditBlog.js";
+
+
 // Page Not Found 
 import NotFound from "./pages/NotFound";
+
 // landing page 
 import WebsiteDevelopment from './pages/landingPage/WebsiteDevelopment.js';
 import GoogleworkspaceLending from './pages/landingPage/GoogleworkspaceLending.js';
@@ -76,37 +90,72 @@ root.render(
   <HelmetProvider>
     <BrowserRouter>
       <ScrollToTop />
-      <Header />
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/contact' element={<ContactPage />} />
-        <Route path='/service' element={<ServicePage />} />
+        {/* Public Website */}
+        <Route element={<PublicLayout />}>
 
-        <Route path="/service/website-development" element={<WebdevelopmentService />} />
-        <Route path="/service/web-design" element={<WebDesignService />} />
-        <Route path="/service/seo" element={<SeoService />} />
-        <Route path="/service/smo" element={<SmoService />} />
-        <Route path="/service/google-ad" element={<GoogleAdService />} />
-        <Route path="/service/meta-ad" element={<MetaAdService />} />
-        <Route path="/service/google-workspace" element={<Googleworkspace />} />
-        <Route path="/service/ms-office-365" element={<MSOffice365 />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/service' element={<ServicePage />} />
 
-        <Route path='/about' element={<AboutPage />} />
-        
-        <Route path='/blog' element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogDetauls />} />
+          <Route path="/service/website-development" element={<WebdevelopmentService />} />
+          <Route path="/service/web-design" element={<WebDesignService />} />
+          <Route path="/service/seo" element={<SeoService />} />
+          <Route path="/service/smo" element={<SmoService />} />
+          <Route path="/service/google-ad" element={<GoogleAdService />} />
+          <Route path="/service/meta-ad" element={<MetaAdService />} />
+          <Route path="/service/google-workspace" element={<Googleworkspace />} />
+          <Route path="/service/ms-office-365" element={<MSOffice365 />} />
 
-        <Route path="/website-development" element={<WebsiteDevelopment />} />
-        <Route path='/google-workspace' element={<GoogleworkspaceLending />} />
+          <Route path='/about' element={<AboutPage />} />
 
-        <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
-        <Route path='/term-condition' element={<TermsConditionsPage />} />
+          {/* Blog pages */}
+          <Route path='/blog' element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogDetauls />} />
+
+          {/* Landing Pages */}
+          <Route path="/website-development" element={<WebsiteDevelopment />} />
+          <Route path='/google-workspace' element={<GoogleworkspaceLending />} />
+
+          {/* Privacy Policy & Term & Condition Pages */}
+          <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+          <Route path='/term-condition' element={<TermsConditionsPage />} />
+
+          {/* page not found */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
+
+        {/* Admin Login */}
+        <Route path="/admin/login" element={<Login />} />
+
+        {/* Protected Admin */}
+        <Route
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/blogs" element={<BlogList />} />
+          <Route path="/admin/blogs/create" element={<CreateBlog />} />
+          <Route path="/admin/blogs/edit/:id" element={<EditBlog />} />
+
+        </Route>
 
 
 
-        <Route path='*' element={<NotFound />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
+
+    <ToastContainer
+      position="top-right"
+      autoClose={3000}
+      hideProgressBar={false}
+      newestOnTop
+      closeOnClick
+      pauseOnHover
+      theme="colored"
+    />
   </HelmetProvider>
 );
