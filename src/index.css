@@ -315,7 +315,27 @@ textarea:focus {
 
 
 
+/* Blog Details Page  */
+.Blog-Content ul li p{
+  margin-bottom: 0px;
+  font-size: 14px;
+}
 
+.Blog-Content ul li{
+  position: relative;
+  padding-left: 20px;
+}
+.Blog-Content ul li::before {
+    content: "";
+    background: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
 
 
 

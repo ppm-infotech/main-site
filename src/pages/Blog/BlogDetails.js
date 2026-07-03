@@ -1,4 +1,5 @@
 import SEO from "../../components/SEO.js";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
@@ -24,7 +25,7 @@ export default function BlogDetails() {
       setBlogs(blogList); // store all blogs
 
       const foundBlog = blogList.find(
-        b => b.title.toLowerCase().replace(/\s+/g, "-") === slug
+        b => b.slug === slug
       );
 
       setBlog(foundBlog);
@@ -64,9 +65,7 @@ export default function BlogDetails() {
                 <img src={blog.imageUrl} alt={blog.title} loading="lazy" />
                 <h2 className="main-title-left mt-3">{blog.title}</h2>
 
-                <div
-                  dangerouslySetInnerHTML={{ __html: blog.description }}
-                ></div>
+                <div className="Blog-Content" dangerouslySetInnerHTML={{ __html: blog.description }} ></div>
               </div>
             </div>
 
@@ -76,11 +75,12 @@ export default function BlogDetails() {
                 <h4>Recent Blogs</h4>
 
                 {recentBlogs.map((item) => {
-                  const blogSlug = item.title.toLowerCase().replace(/\s+/g, "-");
+                  // const blogSlug = item.title.toLowerCase().replace(/\s+/g, "-");
+                  const blogSlug = item.slug;
 
                   return (
                     <div key={item.id} className="recent-blog-item mb-3">
-                      <a href={`/blog/${blogSlug}`} className="d-flex">
+                      <Link to={`/blog/${blogSlug}`} className="d-flex">
                         <img
                           src={item.imageUrl}
                           alt={item.title}
@@ -89,12 +89,12 @@ export default function BlogDetails() {
                           style={{ objectFit: "cover", marginRight: "10px" }}
                         />
                         <p>{item.title}</p>
-                      </a>
+                      </Link>
                     </div>
                   );
                 })}
               </div>
- 
+
               {/* Sidebar CTA Card */}
               <div className="rank-card">
                 <div className="rank-image">

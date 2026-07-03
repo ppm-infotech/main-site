@@ -29,7 +29,7 @@ export default function BlogPage() {
       {/* Meta Start */}
       <SEO
         title=' Blogs | PPM Infotech Bhubaneswar'
-        description='PPM Infotech blog shares expert tips on web development, SEO strategies, website design and digital marketing to help businesses grow online.' 
+        description='PPM Infotech blog shares expert tips on web development, SEO strategies, website design and digital marketing to help businesses grow online.'
         canonical='https://ppminfotech.com/blog'
       />
       {/* Meta End  */}
@@ -51,13 +51,16 @@ export default function BlogPage() {
               <div className="blog-card col-lg-4 col-md-4 col-12 mb-4" key={blog.id} >
                 {/* Image */}
                 <div className="blog-img position-relative">
-                  <img src={blog.imageUrl} alt={blog.title} loading="lazy"/>
+                  <img src={blog.imageUrl} alt={blog.title} loading="lazy" />
                   <span className="blog-badge">Solution</span>
                 </div>
                 {/* Content */}
                 <div className="blog-content">
 
-                  <Link to={`/blog/${blog.title.toLowerCase().replace(/\s+/g, "-")}`} className="title" >
+                  <Link
+                    to={`/blog/${blog.slug}`}
+                    className="title"
+                  >
                     <h4>{blog.title}</h4>
                   </Link>
                 </div>
