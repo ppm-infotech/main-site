@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 
-export default function PageHeader() {
+export default function PageHeader({ title }) {
     const location = useLocation();
 
     // Split URL path
@@ -19,9 +19,11 @@ export default function PageHeader() {
             <div className="container">
 
                 <h1 className="breadcrumb-title">
-                    {pathnames.length > 0
-                        ? formatTitle(pathnames[pathnames.length - 1])
-                        : "Home"}
+                    {title
+                        ? title
+                        : pathnames.length > 0
+                            ? formatTitle(pathnames[pathnames.length - 1])
+                            : "Home"}
                 </h1>
 
                 <div className="breadcrumb-links">
@@ -36,7 +38,7 @@ export default function PageHeader() {
                                 {" / "}
                                 {isLast ? (
                                     <span className="active">
-                                        {formatTitle(value)}
+                                        {title ? title : formatTitle(value)}
                                     </span>
                                 ) : (
                                     <Link to={to}>

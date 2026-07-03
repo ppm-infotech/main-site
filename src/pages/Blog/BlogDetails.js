@@ -53,7 +53,7 @@ export default function BlogDetails() {
       />
       {/* Meta End  */}
 
-      <div className="blog-bredcum"><PageHeader /></div>
+      <div className="blog-bredcum"><PageHeader title={blog.title} /></div>
 
       <section className="single-blog-section py-5">
         <div className="container">
