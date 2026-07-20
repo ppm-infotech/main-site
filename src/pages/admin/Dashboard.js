@@ -57,8 +57,8 @@ function Dashboard() {
         <div className="col-md-3 mb-4">
           <div className="card shadow"  style={{height: "200px"}}>
             <div className="card-body">
-              <h6>Published</h6>
-              <h2>{blogs.length}</h2>
+              <h6>Last Published Time</h6>
+              <h2>{latestBlog?.createdAt?.toDate().toLocaleString() || "-"}</h2>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ function Dashboard() {
             <div className="card-body">
               <h6>Last Updated</h6>
               <p>
-                {latestBlog?.createdAt
+                {latestBlog?.updatedAt
                   ?.toDate()
                   .toLocaleDateString() || "-"}
               </p>

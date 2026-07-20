@@ -1,32 +1,66 @@
-import React from 'react'
-import { Navigate } from "react-router-dom";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../firebase/config";
 import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+import { auth } from "../../firebase/config";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
-
+const ONE_DAY = 24 * 60 * 60 * 1000; // 24 Hours
+console.log("ProtectedRoute Loaded");
 function ProtectedRoute({ children }) {
+    const [loading, setLoading] = useState(true);
+    const [isAuthorized, setIsAuthorized] = useState(false);
 
-  const [user, setUser] = useState(undefined);
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
+            if (!user) {
+                setIsAuthorized(false);
+                setLoading(false);
+                return;
+            }
 
-    return () => unsubscribe();
-  }, []);
+            const loginTime = localStorage.getItem("loginTime");
 
-  if (user === undefined) {
-    return <p>Loading...</p>;
-  }
+            if (!loginTime) {
+                await signOut(auth);
+                setIsAuthorized(false);
+                setLoading(false);
+                return;
+            }
 
+            const currentTime = Date.now();
+            const diff = currentTime - Number(loginTime);
 
-  return user ? children : <Navigate to="/admin/login" />;
+            if (diff > ONE_DAY) {
+                alert("Session expired. Please login again.");
+                await signOut(auth);
+                localStorage.removeItem("loginTime");
+                setIsAuthorized(false);
+                setLoading(false);
+                return;
+            }
+
+            setIsAuthorized(true);
+            setLoading(false);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    if (loading) {
+        return (
+            <div
+                className="d-flex justify-content-center align-items-center"
+                style={{ height: "100vh" }}
+            >
+                <div className="spinner-border text-primary"></div>
+            </div>
+        );
+    }
+
+    if (!isAuthorized) {
+        return <Navigate to="/admin/login" replace />;
+    }
+
+    return children;
 }
 
 export default ProtectedRoute;
-
-
-
-

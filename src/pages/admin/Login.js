@@ -1,6 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from "firebase/auth";
+// import { signInWithEmailAndPassword } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserLocalPersistence,
+} from "firebase/auth";
+
 import { auth } from "../../firebase/config";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +24,25 @@ export default function Login() {
 
     try {
 
-      await signInWithEmailAndPassword(auth, email, password);
+      // await signInWithEmailAndPassword(auth, email, password);
+      // alert("Login Successful");
+      // navigate("/admin/dashboard");
+
+      // Store authentication in browser
+      await setPersistence(auth, browserLocalPersistence);
+
+      // Login
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      // Save login timestamp
+      localStorage.setItem(
+        "loginTime",
+        Date.now().toString()
+      );
 
       alert("Login Successful");
 
