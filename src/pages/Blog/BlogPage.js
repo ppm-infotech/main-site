@@ -23,7 +23,6 @@ export default function BlogPage() {
 
     fetchBlogs();
   }, []);
-  console.log(blogs);
   return (
     <>
       {/* Meta Start */}

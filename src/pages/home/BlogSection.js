@@ -17,9 +17,9 @@ export default function BlogSection() {
                 ...doc.data()
             }));
 
-            setBlogs(blogList);  
+            setBlogs(blogList);
         };
-        
+
         fetchBlogs();
     }, []);
 
@@ -34,18 +34,20 @@ export default function BlogSection() {
 
                     {/* 3 blog card rendering/fetch from firebase  */}
 
-                    {blogs.slice(0,3).map(blog => (
+                    {blogs.slice(0, 3).map(blog => (
 
                         <div className="blog-card col-lg-4 col-md-4 col-12 mb-4" key={blog.id} >
                             {/* Image */}
                             <div className="blog-img position-relative">
-                                <img src={blog.imageUrl} alt={blog.title} loading="lazy"/>
+                                <img src={blog.imageUrl} alt={blog.title} loading="lazy" />
                                 <span className="blog-badge">Solution</span>
                             </div>
                             {/* Content */}
                             <div className="blog-content">
-
-                                <Link to={`/blog/${blog.title.toLowerCase().replace(/\s+/g, "-")}`} className="title" >
+                                <Link
+                                    to={`/blog/${blog.slug}`}
+                                    className="title"
+                                >
                                     <h4>{blog.title}</h4>
                                 </Link>
                             </div>
