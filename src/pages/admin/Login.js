@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-// import { signInWithEmailAndPassword } from "firebase/auth";
 import {
   signInWithEmailAndPassword,
   setPersistence,
@@ -23,11 +22,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-
-      // await signInWithEmailAndPassword(auth, email, password);
-      // alert("Login Successful");
-      // navigate("/admin/dashboard");
-
+      
       // Store authentication in browser
       await setPersistence(auth, browserLocalPersistence);
 

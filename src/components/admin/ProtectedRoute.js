@@ -4,7 +4,7 @@ import { auth } from "../../firebase/config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
 const ONE_DAY = 24 * 60 * 60 * 1000; // 24 Hours
-console.log("ProtectedRoute Loaded");
+
 function ProtectedRoute({ children }) {
     const [loading, setLoading] = useState(true);
     const [isAuthorized, setIsAuthorized] = useState(false);

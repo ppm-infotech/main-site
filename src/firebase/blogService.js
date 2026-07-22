@@ -14,18 +14,6 @@ import { db } from "./config";
 
 const blogCollection = collection(db, "blogs");
 
-// Get all blogs
-// export const getBlogs = async () => {
-//     const q = query(blogCollection, orderBy("createdAt", "desc"));
-
-//     const snapshot = await getDocs(q);
-
-//     return snapshot.docs.map((doc) => ({
-//         id: doc.id,
-//         ...doc.data(),
-//     }));
-// };
-
 export const getBlogs = async () => {
     const q = query(blogCollection, orderBy("createdAt", "desc"));
 

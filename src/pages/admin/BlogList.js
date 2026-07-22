@@ -14,9 +14,6 @@ function BlogList() {
 
   const loadBlogs = async () => {
     const data = await getBlogs();
-
-    console.log(data);
-
     setBlogs(data);
   };
 

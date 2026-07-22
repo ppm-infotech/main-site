@@ -1,9 +1,7 @@
 import { useState } from "react";
 import TiptapEditor from "../../components/admin/TiptapEditor.js";
-// import { storage } from "../../firebase/config";
-// import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { uploadImageToCloudinary } from "../../services/cloudinary";
-import { createBlog } from "../../firebase/blogService";
+import { createBlog } from "../../firebase/blogService.js";
 import { serverTimestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
 
@@ -171,18 +169,6 @@ function CreateBlog() {
               </div>
             )
           }
-          {/* <button
-            type="button"
-            className="btn btn-success mt-3"
-            onClick={async () => {
-              console.log("Image:", image);
-              const url = await uploadImage();
-              console.log("URL:", url);
-              alert("Blog Image URL: "+ url);
-            }}
-          >
-            Upload Image
-          </button> */}
         </div>
 
         <div className="mb-3">
