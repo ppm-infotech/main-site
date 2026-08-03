@@ -24,8 +24,8 @@ function Header() {
               <a href="mailto:info@ppminfotech.com" className="me-4">
                 <i className="fa-solid fa-envelope"></i> info@ppminfotech.com
               </a>
-              <a href="tel:+919818998499" className="">
-                <i className="fa-solid fa-envelope"></i> +91 98189 98499
+              <a href="tel:+917605913863" className="">
+                <i className="fa-solid fa-envelope"></i> +91  76059 13863
               </a>
             </div>
           </div>

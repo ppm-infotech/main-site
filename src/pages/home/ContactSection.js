@@ -27,8 +27,8 @@ export default function ContactSection() {
                                 </div>
                                 <div className="discription">
                                     <span>Need any help?</span>
-                                    <a href='tel:+61 430 955 534' className="title-sm">
-                                        <h5>+61 430 955 534</h5>
+                                    <a href='tel:7605913863' className="title-sm">
+                                        <h5>+91  76059 13863</h5>
                                     </a>
                                 </div>
                             </div>

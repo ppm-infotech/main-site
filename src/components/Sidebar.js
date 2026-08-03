@@ -23,11 +23,11 @@ function Sidebar({ isOpen, setIsOpen }) {
                     <div className="get-in-tuch">
                         <h3 className="mb-3">Get In Touch</h3>
 
-                        <a href="tel:+61 430 955 534" className="me-4">
+                        <a href="tel:+61430955534" className="me-4">
                             <i className="fa-solid fa-phone me-2"></i> Australia: +61 430 955 534
                         </a>
-                        <a href="tel:+917836917667" className="me-4">
-                            <i className="fa-solid fa-phone me-2"></i> India: +91 78369 17667
+                        <a href="tel:+917605913863" className="me-4">
+                            <i className="fa-solid fa-phone me-2"></i> India: +91 76059 13863
                         </a>
                         <a href="mailto:info@ppminfotech.com" className="me-4">
                             <i className="fa-solid fa-envelope me-2"></i> info@ppminfotech.com

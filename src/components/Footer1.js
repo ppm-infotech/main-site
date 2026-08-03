@@ -70,16 +70,16 @@ export default function Footer() {
               <div className='footer-icon-bx mb-3'>
                 <span className='footer-icon'><i className="fa-solid fa-phone"></i></span>
                 <div className='footer-icon-info'>
-                  <span>Call Us 24/7</span>
-                  <a href='tel:+61 430 955 534' className='mt-2'>+61 430 955 534</a>
+                  <span>Call For Australia</span>
+                  <a href='tel:+61430955534' className='mt-2'>+61 430 955 534</a>
                 </div>
               </div>
 
               <div className='footer-icon-bx mb-3'>
                 <span className='footer-icon'><i className="fa-solid fa-phone"></i></span>
                 <div className='footer-icon-info'>
-                  <span>Call Now</span>
-                  <a href='tel:+919818998499' className='mt-2'>+91 98189 98499</a>
+                  <span>Call For India</span>
+                  <a href='tel:+917605913863' className='mt-2'>+91  76059 13863</a>
                 </div>
               </div>
 
