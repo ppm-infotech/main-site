@@ -10,8 +10,9 @@ export default function GoogleAdService() {
     <>
       {/* Meta Start */}
       <SEO
+        keywords="Meta Ads Services in Bhubaneswar"
         title='Best Meta Ads Services in Bhubaneswar | PPM Infotech'
-        description='Grow your business with Meta Ads services in Bhubaneswar from PPM Infotech. Run targeted Facebook and Instagram ads to increase traffic, leads and sales.' 
+        description="Boost your business with Meta Ads services in Bhubaneswar from PPM Infotech. We create and optimize Facebook and Instagram ad campaigns for better leads and ROI."
         canonical='https://ppminfotech.com/service/meta-ad'
       />
       {/* Meta End  */}

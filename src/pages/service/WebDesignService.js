@@ -10,7 +10,8 @@ export default function WebDesignService() {
       {/* Meta Start */}
       <SEO
         title='Web Design Company in Bhubaneswar | PPM Infotech'
-        description=' PPM Infotech offers professional web design services in Bhubaneswar with responsive, user-friendly and SEO-optimized websites to grow your business online.' 
+        description=' Create a professional, responsive, and SEO-friendly website with PPM Infotech. We offer custom web design services in Bhubaneswar to help your business grow online.'
+        keywords="Web Design Company in Bhubaneswar"
         canonical='https://ppminfotech.com/service/web-design'
       />
       {/* Meta End  */}

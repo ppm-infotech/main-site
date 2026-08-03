@@ -10,8 +10,9 @@ export default function Googleworkspace() {
 
       {/* Meta Start */}
       <SEO
-        title='Google Workspace Setup in Bhubaneswar | PPM Infotech'
-        description='Get Google Workspace services in Bhubaneswar from PPM Infotech including business email setup, cloud collaboration tools and secure workspace solutions.' 
+        keywords=" Google Workspace Services in Bhubaneswar"
+        title='Google Workspace Services in Bhubaneswar | PPM Infotech'
+        description="Simplify business communication with Google Workspace services from PPM Infotech. Get professional setup, migration, support, and secure collaboration solutions." 
         canonical='https://ppminfotech.com/service/google-workspace'
       />
       {/* Meta End  */}

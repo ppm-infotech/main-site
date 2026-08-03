@@ -10,8 +10,9 @@ export default function SmoService() {
     <>
       {/* Meta Start */}
       <SEO
+        keywords="SMO Services in Bhubaneswar"
         title='SMO Services in Bhubaneswar | PPM Infotech'
-        description='PPM Infotech offers SMO services in Bhubaneswar to grow your brand on Facebook, Instagram and LinkedIn with engaging content, profile optimization and audience reach.' 
+        description="  Grow your brand with PPM Infotech's SMO services in Bhubaneswar. We optimize social media profiles, increase engagement, and build a stronger online presence."
         canonical='https://ppminfotech.com/service/smo'
       />
       {/* Meta End  */}

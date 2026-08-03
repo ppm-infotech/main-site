@@ -10,8 +10,9 @@ export default function GoogleAdService() {
     <>
       {/* Meta Start */}
       <SEO
-        title='Google Ads Services in Bhubaneswar | PPC Advertising | PPM Infotech'
-        description='Boost leads with Google Ads services in Bhubaneswar from PPM Infotech. We create targeted PPC campaigns to drive traffic, conversions and business growth.' 
+        keywords="Google Ads Services in Bhubaneswar"
+        title='Google Ads Services in Bhubaneswar | PPM Infotech'
+        description="Drive quality leads and boost sales with PPM Infotech's Google Ads services in Bhubaneswar. We create, manage, and optimize high-converting PPC campaigns." 
         canonical='https://ppminfotech.com/service/google-ad'
       />
       {/* Meta End  */}

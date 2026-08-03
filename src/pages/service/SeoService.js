@@ -10,8 +10,9 @@ export default function SeoService() {
     <>
       {/* Meta Start */}
       <SEO
-        title='Best SEO Services in Bhubaneswar | PPM Infotech'
-        description=' Boost your website ranking with SEO services in Bhubaneswar from PPM Infotech. Improve traffic, visibility and leads with expert search engine optimization.' 
+        keywords="SEO Company in Bhubaneswar"
+        title='SEO Company in Bhubaneswar | PPM Infotech'
+        description=" Boost your Google rankings with PPM Infotech's SEO services in Bhubaneswar. We provide on-page, off-page, local SEO, and technical SEO to grow your business. "
         canonical='https://ppminfotech.com/service/seo'
       />
       {/* Meta End  */}

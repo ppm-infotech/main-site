@@ -9,8 +9,9 @@ export default function WebdevelopmentService() {
     <>
       {/* Meta Start */}
       <SEO
-        title=' Affordable Website Development in Bhubaneswar | PPM Infotech '
-        description='PPM Infotech offers affordable website development in Bhubaneswar with responsive design, SEO-friendly structure and custom solutions for business growth.' 
+        title=' Website Development Company in Bhubaneswar | PPM Infotech'
+        description=' PPM Infotech offers professional website development services in Bhubaneswar with responsive, SEO-friendly, secure, and custom websites for businesses.' 
+        keywords="Website Development Company in Bhubaneswar"
         canonical='https://ppminfotech.com/service/website-development'
       />
       {/* Meta End  */}

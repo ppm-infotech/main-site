@@ -8,8 +8,9 @@ export default function MSOffice365() {
     <>
       {/* Meta Start */}
       <SEO
-        title='Microsoft 365 Setup Services in Bhubaneswar | PPM Infotech'
-        description=' PPM Infotech offers Microsoft 365 setup in Bhubaneswar including business email, cloud storage, Microsoft Teams and Office apps for secure collaboration.' 
+        keywords="Microsoft Office 365 Services in Bhubaneswar"
+        title='Microsoft Office 365 Services in Bhubaneswar | PPM Infotech'
+        description="Get Microsoft Office 365 services in Bhubaneswar from PPM Infotech. We provide setup, migration, support, and business solutions for secure workplace productivity."
         canonical='https://ppminfotech.com/service/ms-office-365'
       />
       {/* Meta End  */}
