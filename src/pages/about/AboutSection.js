@@ -9,7 +9,7 @@ export default function AboutSection() {
                     <div className='col-xl-5 col-lg-5 col-md-5 col-12'>
                         <div className='home-about-img position-relative'>
                             {/* Main Image */}
-                            <img src="/media/images/homeOffic.jpeg" className="img-fluid main-img" alt="Business"  loading="lazy"/>
+                            <img src="/media/images/about-ppm.jpeg" className="img-fluid main-img" alt="Business"  loading="lazy"/>
                             {/* Small Overlay Image */}
                             <div className="overlay-img">
                                 <img src="/media/images/side-img2.jpeg" className="img-fluid" alt="Businesimage" loading="lazy"/>

@@ -16,7 +16,7 @@ export default function BusinessSolution() {
                     <div className='col-lg-5 col-md-5 mb-4 col-12 mb-lg-0 home-about-left'>
                         <div className='home-about-img position-relative'>
                             {/* Main Image */}
-                            <img src="/media/images/homeOffice2.jpeg" className="img-fluid main-img" alt="Business" loading="lazy" />
+                            <img src="/media/images/about-ppm.jpeg" className="img-fluid main-img" alt="Business" loading="lazy" />
                             {/* Small Overlay Image */}
                             <div className="overlay-img">
                                 <img src="/media/images/side-img1.png" className="img-fluid" alt="Business-seo" loading="lazy" />

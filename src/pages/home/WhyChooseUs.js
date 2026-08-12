@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
                     <div className='col-lg-5 col-md-6 col-12 mb-4 mb-lg-0 why-chose-left position-relative'>
                         <div className='why-chose-img position-relative'>
                             {/* Main Image */}
-                            <img src="/media/images/why-chooseyou2.jpeg" className="img-fluid main-img" alt="Business" loading="lazy" />
+                            <img src="/media/images/why-chose-ppm.jpeg" className="img-fluid main-img" alt="Business" loading="lazy" />
                         </div>
                         <div className="success-rate">
                             <h4 className="title">85%</h4>
