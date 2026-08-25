@@ -22,7 +22,7 @@ export default function HomePage() {
       <SEO
         title={'Best Website Development Company in Bhubaneswar | PPM Infotech'}
         description={'PPM Infotech is the Best Web Development Company in Bhubaneswar offering website design, development and digital marketing services for businesses online.'}
-        keywords={'Website Design company in Bhubaneswar, Digital Marketing Company in Bhubaneswar, SEO Services in Bhubaneswar, Custom Website Development in  Bhubaneswar, Software Development Company in Bhubaneswar, e-commerce Website Development in Bhubaneswar, Business Intelligence Services in Bhubaneswar'}
+        keywords={'Website Design company in Bhubaneswar, Digital Marketing Company in Bhubaneswar, SEO Services in Bhubaneswar, Custom Website Development in  Bhubaneswar, Software Development Company in Bhubaneswar, e-commerce Website Development in Bhubaneswar, Business Intelligence Services in Bhubaneswar, Best ITtraing institute in Odisha, Ai Skill development training near me, Best AI training institute near me'}
         canonical={'https://ppminfotech.com/'}
       />
       {/* Meta End  */}
