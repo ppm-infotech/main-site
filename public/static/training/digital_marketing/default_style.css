@@ -1,0 +1,145 @@
+/* ========== DEFAULT CSS FOR PROJECT ========== */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Global CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #f66c43;
+    --title-color: #08124b;
+    --text-color: #6c758f;
+}
+
+/* Body Styling */
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Images */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* List */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Paragraph */
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 26px;
+}
+
+/* Buttons */
+button,
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+    width: 100%;
+    border: 1px solid #ddd;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+.pt-btn {
+    background: linear-gradient(to right, #b73a09, #dc8154);
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.pt-btn::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    right: -10px;
+    bottom: -20px;
+    border-radius: 50%;
+}
+
+.pt-btn:hover {
+    color: #ffffff;
+    background: var(--title-color);
+    transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+}
