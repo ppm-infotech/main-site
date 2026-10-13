@@ -113,7 +113,7 @@ export default function Footer() {
               <div className='footer-icon-info'>
                 <p className='mt-2' >
                   <span className='color-main'>Bhubaneswar Office: </span>
-                  308, DLF Cybercity, Patia<br />
+                  507, DLF Cybercity, Patia<br />
                   Bhubaneswar - 751024
                 </p>
               </div>

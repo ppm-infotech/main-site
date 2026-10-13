@@ -48,7 +48,7 @@ function Sidebar({ isOpen, setIsOpen }) {
                         <p className="me-4 sidebar-p">
                             <i className="fa-solid fa-location-dot me-2"></i>
                             <span>
-                                Bhubaneswar Office: 308, DLF Cybercity,<br />
+                                Bhubaneswar Office: 507, DLF Cybercity,<br />
                                 Patia Bhubaneswar - 751024
                             </span>
                         </p>
