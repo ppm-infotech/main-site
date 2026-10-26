@@ -1,0 +1,496 @@
+/* ==============================
+   HEADER STYLES
+============================== */
+:root {
+    --primary-color: #f15a24;
+    --secondary-color: #1c2539;
+}
+
+.header {
+    z-index: 9999;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-wraper {
+    background-color: #fff;
+    border-left: 20px solid var(--primary-color);
+    border-right: 20px solid var(--primary-color);
+    border-radius: 0 0 20px 20px;
+}
+
+.action-bar {
+    border-bottom: 1px solid #ddd;
+}
+
+/* ==============================
+   LOGO
+============================== */
+
+.navbar-brand {
+    width: 20%;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==============================
+   NAVIGATION MENU
+============================== */
+
+.menu-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.nav-right-btn-sec {
+    width: 30%;
+}
+
+.navbar-nav {
+    gap: 25px;
+}
+
+.menu-holder .nav-link {
+    display: block;
+    color: #1c2539 !important;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+    min-width: max-content;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-holder .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-item .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* ==============================
+   TRAINING DROPDOWN
+============================== */
+
+.ppm-menu-drpdn .dropdown-menu {
+    background: #ffceb7;
+    padding: 0;
+    gap: 0;
+}
+
+.ppm-menu-drpdn .dropdown-menu li {
+    margin: 0;
+}
+
+.ppm-menu-drpdn .dropdown-menu .dropdown-item {
+    border: 1px dashed var(--primary-color);
+    padding: 10px;
+}
+
+/* ==============================
+   TOP CONTACT BAR
+============================== */
+
+.rgt-action-bar i {
+    color: var(--primary-color);
+}
+
+/* ==============================
+   BOOK A MEETING BUTTON
+============================== */
+
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* ==============================
+   SIDEBAR MENU BUTTON
+============================== */
+
+#sidebar-menu-btn {
+    background: #ffecec;
+    height: 55px;
+    width: 55px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+    min-width: max-content;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#sidebar-menu-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+#sidebar-menu-btn .menu-dark {
+    display: block;
+}
+
+#sidebar-menu-btn .menu-light {
+    display: none;
+}
+
+#sidebar-menu-btn:hover .menu-light {
+    display: block;
+}
+
+#sidebar-menu-btn:hover .menu-dark {
+    display: none;
+}
+
+/* ==============================
+   RESPONSIVE STYLES
+============================== */
+
+/* Large desktop: 1400px and above */
+@media (min-width: 1400px) {}
+
+/* Below 1400px */
+@media (max-width: 1399px) {}
+
+/* Below 1200px */
+@media (max-width: 1199px) {
+
+    .nav-link {
+        padding: 0 !important;
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .navbar-brand img {
+        width: 140px;
+    }
+
+    .navbar-brand {
+        width: 15% !important;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .custom-btn {
+        padding: 11px 16px;
+        font-size: 13px;
+        line-height: 21px;
+        height: 45px;
+        border-radius: 10px;
+    }
+
+    #sidebar-menu-btn {
+        height: 45px;
+        width: 45px;
+        border-radius: 10px;
+    }
+}
+
+/* Tablet and below */
+@media (max-width: 991px) {
+
+    .menu-holder {
+        justify-content: flex-end !important;
+    }
+
+    .navbar-sec.navbar {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-toggler {
+        margin-right: 20px;
+    }
+
+    .left-action-bar {
+        display: inline-grid;
+        text-align: center;
+    }
+
+    .rgt-action-bar {
+        display: grid;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .rgt-action-bar a {
+        margin-right: 0 !important;
+        font-size: 14px;
+    }
+
+    .menu-holder {
+        flex-direction: column;
+        position: relative;
+        width: fit-content;
+    }
+
+    .menu-holder .navbar-collapse {
+        position: absolute;
+        top: 50px;
+        width: 300px;
+        left: 0;
+        background: var(--secondary-color);
+        padding: 0;
+        border: 2px dashed var(--primary-color);
+        z-index: 1000;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 10px;
+        border: 1px dashed var(--primary-color);
+    }
+
+    .menu-holder .nav-link {
+        color: #fff !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        border: 2px solid var(--primary-color);
+    }
+}
+
+/* Mobile landscape and below */
+@media (max-width: 767px) {
+
+    .rgt-action-bar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-action-bar {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .navbar-sec.navbar {
+        padding: 15px 0 !important;
+    }
+
+    .menu-holder {
+        width: fit-content;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 575px) {
+
+    .nav-right-btn-sec {
+        display: none !important;
+    }
+
+    .menu-holder .navbar-collapse {
+        position: absolute;
+        top: 50px;
+        width: 300px;
+        right: 0;
+        left: unset;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 525px) {
+
+    .left-action-bar {
+        display: none;
+    }
+}
+
+/* Screens below 420px */
+@media (max-width: 420px) {}
+
+/* Screens below 360px */
+@media (max-width: 360px) {}
+
+.custom-btn {
+    background-color: #ff5e14;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    min-width: -webkit-max-content;
+    min-width: max-content;
+    padding: 17px 30px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+
+/* Sidebar panel */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    max-width: 100%;
+    height: 100vh;
+    padding: 40px;
+    background: #fff;
+    z-index: 10001;
+    overflow-y: auto;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0.4s ease;
+}
+
+/* Open sidebar */
+.sidebar.active {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Close button */
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    color: #1c2539;
+    z-index: 2;
+}
+
+/* Sidebar logo */
+.sidebar .navbar-brand {
+    display: inline-block;
+    width: 200px;
+    max-width: 85%;
+}
+
+.sidebar .navbar-brand img {
+    width: 100%;
+    height: auto;
+}
+
+/* Sidebar description */
+.sidebar-desc {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Contact heading */
+.get-in-tuch h3 {
+    color: #1c2539;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Contact links */
+.get-in-tuch>a {
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.get-in-tuch>a i,
+.sidebar-p i {
+    color: var(--primary-color);
+}
+
+/* Office addresses */
+.sidebar-p {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.sidebar-p i {
+    margin-top: 5px;
+}
+
+/* Social links */
+.sidebar-social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.sidebar-social-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.sidebar-social-wrapper a:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Overlay */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile responsive */
+@media (max-width: 575px) {
+    .sidebar {
+        width: 100%;
+        padding: 30px 22px;
+    }
+
+    .sidebar .navbar-brand {
+        width: 170px;
+    }
+
+    .sidebar-desc {
+        font-size: 14px;
+    }
+}

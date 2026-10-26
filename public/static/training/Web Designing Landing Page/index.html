@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/fullstack-development-course/assets/favicon.png">
+    <title>Web Designing Course | Learn with PPM Infotech</title>
+
+    <meta name="description"
+        content=" Join PPM Infotech's Full Stack Development Course to learn front-end and back-end technologies with hands-on projects, expert training, and career support.">
+
+    <meta name="keywords"
+        content=" Full Stack Development Course, full stack training near me, full stack development institute near me, Website development training In Bhubaneswar">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Default CSS Style -->
+    <link rel="stylesheet" href="default_style.css">
+
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-wraper">
+
+            <!-- Top Action Bar -->
+            <div class="row action-bar py-2">
+                <div class="col-lg-6 col-md-6 col-12 left-action-bar">
+                    Are you ready to grow up your business?
+                    <a href="/contact" class="top-contact ms-2">
+                        Contact Us →
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12 rgt-action-bar text-end">
+                    <a href="mailto:info@ppminfotech.com" class="me-4">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@ppminfotech.com
+                    </a>
+
+                    <a href="tel:+917605913863">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 76059 13863
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav
+                class="navbar-sec navbar navbar-expand-lg navbar-light px-4 py-3 justify-content-between align-items-center">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="../assets/ppm_infotech_img.png" alt="PPM Infotech Logo" loading="lazy">
+                </a>
+
+                <!-- Menu -->
+                <div class="menu-holder">
+
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navigation Links -->
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/service">Services</a>
+                            </li>
+
+                            <!-- Training Dropdown -->
+                            <li class="nav-item dropdown ppm-menu-drpdn">
+                                <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Training
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="https://ppminfotech.com/fullstack-development-course/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            FullStack Development
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="https://ppminfotech.com/digital-marketing-course/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            Digital Marketing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="https://ppminfotech.com/web-design-course/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            Web Design
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Side Buttons -->
+                <div class="nav-right-btn-sec d-flex justify-content-end align-items-center">
+
+                    <!-- Book a Meeting Button -->
+                    <a href="/contact" class="header-btn custom-btn">
+                        Book a Meeting
+                    </a>
+
+                    <!-- Sidebar Menu Button -->
+                    <button id="sidebar-menu-btn" class="sidebar-menu-btn ms-3" type="button" aria-label="Open sidebar"
+                        aria-expanded="false" onclick="openSidebar()">
+                        <img class="menu-dark" src="../assets/menu-dark-icon.png" alt="Menu">
+
+                        <img class="menu-light" src="../assets/menu-t-icon.png" alt="Menu">
+                    </button>
+
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="headerSidebar">
+
+            <!-- Close Button -->
+            <button type="button" class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">
+                ✕
+            </button>
+
+            <div class="sidebar-menu">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="../assets/ppm_infotech_img.png" alt="PPM Infotech" loading="lazy">
+                </a>
+
+                <div class="sidebar-body mt-4">
+                    <!-- Description -->
+                    <p class="sidebar-desc mt-3">
+                        We help businesses build a strong digital presence, generate quality
+                        leads, and achieve measurable growth through innovative technology
+                        and strategic marketing.
+                    </p>
+
+                    <!-- Contact Information -->
+                    <div class="get-in-tuch">
+
+                        <h3 class="mb-3">Get In Touch</h3>
+
+                        <a href="tel:+61430955534" class="me-4">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            Australia: +61 430 955 534
+                        </a>
+
+                        <a href="tel:+917605913863" class="me-4">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            India: +91 76059 13863
+                        </a>
+
+                        <a href="mailto:info@ppminfotech.com" class="me-4">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            info@ppminfotech.com
+                        </a>
+
+                        <!-- Australia Address -->
+                        <p class="me-4 mt-4 sidebar-p">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <span>Australia: Adelaide, Australia</span>
+                        </p>
+
+                        <!-- Delhi Office -->
+                        <p class="me-4 sidebar-p">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <span>
+                                Delhi Office: 293, Lane No.2,<br>
+                                Saidulajab, Near Saket Metro,<br>
+                                New Delhi - 110030
+                            </span>
+                        </p>
+
+                        <!-- Bhubaneswar Office -->
+                        <p class="me-4 sidebar-p">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <span>
+                                Bhubaneswar Office: 507, DLF Cybercity,<br>
+                                Patia Bhubaneswar - 751024
+                            </span>
+                        </p>
+
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="sidebar-social-wrapper">
+
+                        <a href="https://www.facebook.com/ppminfotech" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/ppminfotech/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/ppminfotech" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@PPMInfotech" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- ====== HERO BANNER ====== -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="row align-items-center hero-row-wrapper">
+                <!-- ====== LEFT CONTENT ====== -->
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="pt_hero_titl_wrapper">
+                            <h1>
+                                Master Web Designing Course
+                                <span class="blue-big">
+                                    in Bhubaneswar
+                                </span>
+                            </h1>
+                            <div class="pt_title_curve_line">
+                                <img src="../assets/curve_line_img_blue.png" alt="curve_line">
+                            </div>
+                        </div>
+                        <p>
+                            Master modern, responsive web design with industry-focused training and real-world
+                            project experience to launch your career.
+                        </p>
+                        <!-- Buttons -->
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <div class="hero-btns">
+                                <a href="#contact-section" class="pt-btn banner_lft_btn">
+                                    <i class="bi bi-chevron-double-right"></i>
+                                    Enroll Now
+                                </a>
+                            </div>
+                            <div class="pt_action_btn_onoff">
+                                <a href="https://wa.me/917605913863" class="pt_call_btn2 pt-btn" download>
+                                    <i class="bi bi-hand-index hand-icon"></i>
+                                    Batch Start 1st November 2026
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====== RIGHT IMAGE ====== -->
+                <div class="col-lg-6">
+                    <div class="hero-image-wrapper">
+                        <img src="../assets/hero_banner_right_img.jpg" alt="student" class="main-student">
+                        <div class="floating-card">
+                            <div class="student-users">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                            </div>
+                            <h4 class="m-0">500+</h4>
+                            <p>Success Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== CALL TO ACTION SECTION ====== -->
+    <section class="pt_action_box_sec1">
+        <div class="container">
+            <div class="pt_action_box1">
+                <div class="row align-items-center gy-lg-5 gy-md-4 gy-sm-3">
+                    <div class="col-md-6 col-lg-3 ">
+                        <div class="pt_feature_box1">
+                            <div class="pt_feature_icon1">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <div class="pt_feature_text1">
+                                <h4>6 Months Training</h4>
+                                <p>
+                                    Build professional designing skills with expert guidance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 ">
+                        <div class="pt_feature_box1">
+                            <div class="pt_feature_icon1">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <div class="pt_feature_text1">
+                                <h4>100% Practical Learning</h4>
+                                <p>
+                                    Learn designing through hands-on coding and projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 ">
+                        <div class="pt_feature_box1">
+                            <div class="pt_feature_icon1">
+                                <i class="bi bi-briefcase"></i>
+                            </div>
+                            <div class="pt_feature_text1">
+                                <h4>Experience Certificate</h4>
+                                <p>
+                                    Receive professional certificate after course completion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 ">
+                        <div class="pt_action_btn_wrap1">
+                            <a href="/fullstack-development-course/../assets/Fullstack-course-struct.pdf" class="pt-btn"
+                                download>
+                                Download Syllabus
+                            </a>
+                            <p>
+                                View complete training roadmap
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHY CHOOSE US SECTION ====== -->
+    <section class="pt_choose_us" id="about-section">
+        <div class="container">
+            <div class="row align-items-center ">
+                <!-- Left Image Area -->
+                <div class="col-lg-6 col-md-12 center-div">
+                    <div class="pt_choose_left">
+                        <!-- Main Image -->
+                        <div class="pt_main_img">
+                            <img src="../assets/web_why_choose_image.jpeg" alt="">
+                        </div>
+                        <!-- Curved Image -->
+                        <div class="pt_curve_img">
+                            <img src="../assets/why_choose_circle.jpeg" alt="">
+                        </div>
+                        <!-- Floating Icons -->
+                        <div class="pt_floating_icon pt_icon_1">
+                            <img src="../assets/why-choose-floating-icon.png" alt="">
+                        </div>
+                        <div class="pt_floating_icon pt_icon_2">
+                            <img src="../assets/experience-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Content Area -->
+                <div class="col-lg-6 col-md-12 mt-sm-5">
+                    <div class="pt_choose_content">
+                        <h5 class="pt_subtl">Why Choose PPM Infotech</h5>
+                        <h2 class="pt_title">
+                            What Makes Our Training
+                            <span class="blue-text pt_curve_text">Truly Different</span>
+                        </h2>
+                        <p>
+                            PPM Infotech is a web development company. We now offer training in Web Designing and other
+                            in-demand IT skills. As an active development company, our training is based on real work,
+                            not theory. Students learn from experienced trainers and work on real, hands-on projects,
+                            and get exposure to international client work. With modern AI tools and a certificate,
+                            students choose PPM Infotech to start their web design career.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="pt_feature_box">
+                                    <div class="pt_feature_icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <div class="pt_feature_text">
+                                        <h4> Expert Trainer Support</h4>
+                                        <p>
+                                            Learn from experienced trainers with easy guidance.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="pt_feature_box">
+                                    <div class="pt_feature_icon">
+                                        <i class="bi bi-headset"></i>
+                                    </div>
+                                    <div class="pt_feature_text">
+                                        <h4>Live Project Training
+                                        </h4>
+                                        <p>
+                                            Practice with real-time projects and assignments.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="pt_feature_box">
+                                    <div class="pt_feature_icon">
+                                        <i class="bi bi-briefcase"></i>
+                                    </div>
+                                    <div class="pt_feature_text">
+                                        <h4>Work Experience Certificate</h4>
+                                        <p>
+                                            Earn valuable certified hands-on work experience
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="pt_feature_box">
+                                    <div class="pt_feature_icon">
+                                        <i class="bi bi-patch-check"></i>
+                                    </div>
+                                    <div class="pt_feature_text">
+                                        <h4>Real Work Experience</h4>
+                                        <p>
+                                            Gain valuable practical job-ready skills through mentor-led training
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== COURSE DETAILS & ENROLLMENT SECTION ====== -->
+    <section class="pt_course_section" id="course-info">
+        <div class="container">
+            <div class="pt_course_box">
+                <!-- Top Cards -->
+                <div class="row g-4">
+                    <div class="col-md-4 col-lg-4 col-12">
+                        <div class="pt_feature_card">
+                            <div class="pt_enrol_feature_icon">
+
+                                <h3 class="pt_feature_title">Limited Seats</h3>
+                            </div>
+                            <p class="pt_feature_text">Secure your seat early for quality learning and personalized
+                                trainer support.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-12">
+                        <div class="pt_feature_card">
+                            <div class="pt_enrol_feature_icon">
+
+                                <h3 class="pt_feature_title">Real Work Experience</h3>
+                            </div>
+                            <p class="pt_feature_text">Build practical skills through real-time projects and
+                                professional work experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-12">
+                        <div class="pt_feature_card">
+                            <div class="pt_enrol_feature_icon">
+
+                                <h3 class="pt_feature_title">Certification</h3>
+                            </div>
+                            <p class="pt_feature_text">Earn a recognized certificate to validate your skills and boost
+                                career opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="pt_title">
+                    Course Details & Enrollment
+                    <div class="pt_title_line"></div>
+                </h2>
+                <!-- Bottom 3 Lists -->
+                <div class="row g-md-3 g-lg-4 g-sm-2 g-2">
+                    <div class="col-md-4">
+                        <div class="pt_list_box">
+                            <div class="pt_list_item">Affordable Web Designing Courses</div>
+                            <div class="pt_list_item">Career-Focused Skill Development</div>
+                            <div class="pt_list_item">Industry-Oriented Practical Learning</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pt_list_box">
+                            <div class="pt_list_item">Work Experience Certificate</div>
+                            <div class="pt_list_item"> Live Project Training</div>
+                            <div class="pt_list_item"> AI Integrated Web Designing Training</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pt_list_box">
+                            <div class="pt_list_item"> Expert Senior Mentorship</div>
+                            <div class="pt_list_item">Exclusive Enrollment Offers</div>
+                            <div class="pt_list_item"> Flexible EMI Payment Plans </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== MODULE TAB SECTION ====== -->
+    <section class="pt_module_section" id="modules-section">
+        <div class="container">
+            <div class="pt_learn_title text-center">
+                <h2 class="pt_title">
+                    Web Designing
+                    <span class="blue-text pt_curve_text">Course Modules</span>
+                </h2>
+            </div>
+            <!-- Module Tabs -->
+            <div class="web_modules_tabs">
+                <ul class="nav nav-pills justify-content-center flex-wrap" id="webPythonModules" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="web-module1-tab" data-bs-toggle="pill"
+                            data-bs-target="#web-module1" type="button" role="tab">
+                            Module 01
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-module2-tab" data-bs-toggle="pill"
+                            data-bs-target="#web-module2" type="button" role="tab">
+                            Module 02
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-module3-tab" data-bs-toggle="pill"
+                            data-bs-target="#web-module3" type="button" role="tab">
+                            Module 03
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-module4-tab" data-bs-toggle="pill"
+                            data-bs-target="#web-module4" type="button" role="tab">
+                            Module 04
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-module5-tab" data-bs-toggle="pill"
+                            data-bs-target="#web-module5" type="button" role="tab">
+                            Module 05
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-module6-tab" data-bs-toggle="pill"
+                            data-bs-target="#web-module6" type="button" role="tab">
+                            Module 06
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Module Content -->
+            <div class="tab-content web_modules_content" id="webPythonModulesContent">
+                <!-- Module 1 -->
+                <div class="tab-pane fade show active" id="web-module1" role="tabpanel"
+                    aria-labelledby="web-module1-tab" tabindex="0">
+                    <div class="web_module_header">
+                        <div>
+                            <h3 class="pt_title">Web Design Foundations</h3>
+                        </div>
+                        <i class="bi bi-code-slash web_module_header_icon"></i>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table web_module_table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Module Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Introduction to Web Designing</td>
+                                    <td>How websites work, front-end basics, code editors, browser DevTools, and career
+                                        paths.</td>
+                                </tr>
+                                <tr>
+                                    <td>HTML5 Basics</td>
+                                    <td>Page structure, headings, paragraphs, links, images, lists, and attributes.</td>
+                                </tr>
+                                <tr>
+                                    <td>Forms & Tables</td>
+                                    <td>Input types, form elements, buttons, tables, and form best practices.</td>
+                                </tr>
+                                <tr>
+                                    <td>Semantic HTML & SEO</td>
+                                    <td>Header, nav, section, article, footer, accessibility, and SEO-friendly markup.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Media & Embeds</td>
+                                    <td>Audio, video, iframes, Google Maps, YouTube embeds, and favicons.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Module 2 -->
+                <div class="tab-pane fade" id="web-module2" role="tabpanel" aria-labelledby="web-module2-tab"
+                    tabindex="0">
+                    <div class="web_module_header">
+                        <div>
+                            <h3 class="pt_title">Styling & Layouts</h3>
+                        </div>
+                        <i class="bi bi-braces web_module_header_icon"></i>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table web_module_table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Module Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CSS3 Fundamentals</td>
+                                    <td>Selectors, colors, typography, backgrounds, borders, units, and Google Fonts.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Box Model & Positioning</td>
+                                    <td>Margin, padding, display types, position, z-index, overflow, and pseudo-classes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Flexbox</td>
+                                    <td>One-dimensional layouts, alignment, spacing, wrapping, and navbar building.</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS Grid</td>
+                                    <td>Two-dimensional layouts, grid areas, gaps, and complex page sections.</td>
+                                </tr>
+                                <tr>
+                                    <td>Animations & Effects</td>
+                                    <td>Transitions, transforms, keyframes, gradients, shadows, and hover effects.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Module 3 -->
+                <div class="tab-pane fade" id="web-module3" role="tabpanel" aria-labelledby="web-module3-tab"
+                    tabindex="0">
+                    <div class="web_module_header">
+                        <div>
+                            <h3 class="pt_title">Visual Design & Branding</h3>
+                        </div>
+                        <i class="bi bi-palette web_module_header_icon"></i>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table web_module_table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Module Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Design Principles & UI/UX</td>
+                                    <td>Color theory, typography, spacing, hierarchy, wireframes, and user experience
+                                        basics.</td>
+                                </tr>
+                                <tr>
+                                    <td>Figma for Web Design</td>
+                                    <td>Frames, components, auto layout, prototyping, and design handoff.</td>
+                                </tr>
+                                <tr>
+                                    <td>Photoshop for Web</td>
+                                    <td>Image editing, retouching, banners, hero images, and web-optimized exports.</td>
+                                </tr>
+                                <tr>
+                                    <td>Illustrator for Graphics</td>
+                                    <td>Vector logos, icons, illustrations, SVG export, and brand assets.</td>
+                                </tr>
+                                <tr>
+                                    <td>Canva for Quick Creatives</td>
+                                    <td>Social media posts, banners, thumbnails, presentations, and brand kits.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Module 4 -->
+                <div class="tab-pane fade" id="web-module4" role="tabpanel" aria-labelledby="web-module4-tab"
+                    tabindex="0">
+                    <div class="web_module_header">
+                        <div>
+                            <h3 class="pt_title">Responsive & Interactive Web</h3>
+                        </div>
+                        <i class="bi bi-phone web_module_header_icon"></i>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table web_module_table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Module Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Responsive Design Basics</td>
+                                    <td>Mobile-first approach, media queries, viewport settings, and breakpoints.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bootstrap 5 Framework</td>
+                                    <td>Grid system, navbar, cards, forms, modals, carousels, utilities, and icons.</td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript Fundamentals</td>
+                                    <td>Variables, data types, operators, conditions, loops, functions, and arrays.</td>
+                                </tr>
+                                <tr>
+                                    <td>DOM & Events</td>
+                                    <td>Selecting elements, changing content and styles, click and scroll events, and
+                                        form validation.</td>
+                                </tr>
+                                <tr>
+                                    <td>Sliders & Animations</td>
+                                    <td>Swiper, AOS, scroll effects, counters, and interactive UI components.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Module 5 -->
+                <div class="tab-pane fade" id="web-module5" role="tabpanel" aria-labelledby="web-module5-tab"
+                    tabindex="0">
+                    <div class="web_module_header">
+                        <div>
+                            <h3 class="pt_title">WordPress & Elementor</h3>
+                        </div>
+                        <i class="bi bi-window-sidebar web_module_header_icon"></i>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table web_module_table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Module Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>WordPress Setup</td>
+                                    <td>Installation, dashboard, themes, plugins, pages, posts, menus, and media
+                                        library.</td>
+                                </tr>
+                                <tr>
+                                    <td>Elementor Basics</td>
+                                    <td>Drag-and-drop editor, sections, widgets, global colors, and global fonts.</td>
+                                </tr>
+                                <tr>
+                                    <td>Elementor Pro Design</td>
+                                    <td>Custom headers and footers, popups, forms, templates, and dynamic content.</td>
+                                </tr>
+                                <tr>
+                                    <td>Figma to WordPress</td>
+                                    <td>Converting designs into Elementor pages with pixel-perfect responsive layouts.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Speed, SEO & Security</td>
+                                    <td>Image optimization, caching, on-page SEO, Google Search Console, and backups.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Module 6 -->
+                <div class="tab-pane fade" id="web-module6" role="tabpanel" aria-labelledby="web-module6-tab"
+                    tabindex="0">
+                    <div class="web_module_header">
+                        <div>
+                            <h3 class="pt_title">AI Tools & Career Launch</h3>
+                        </div>
+                        <i class="	bi bi-rocket-takeoff web_module_header_icon"></i>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table web_module_table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Module Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ChatGPT for Designers</td>
+                                    <td>Prompt writing, content creation, code assistance, debugging, and idea
+                                        generation.</td>
+                                </tr>
+                                <tr>
+                                    <td>Claude for Web Development</td>
+                                    <td>Generating layouts, refining code, UI copywriting, and speeding up projects.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Hosting & Deployment</td>
+                                    <td>Domain setup, cPanel, SSL, Git and GitHub basics, and launching a live website.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Live Client Projects</td>
+                                    <td>Business website, portfolio website, landing page, and a complete WordPress
+                                        project.</td>
+                                </tr>
+                                <tr>
+                                    <td>Career Preparation</td>
+                                    <td>Resume building, portfolio showcase, freelancing, client handling, and interview
+                                        preparation.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHAT LEARN SECTION ====== -->
+    <section class="pt_learning_section">
+        <div class="container">
+            <div class="pt_learn_title text-center">
+                <h2 class="pt_title">
+                    What You'll
+                    <span class="blue-text pt_curve_text">Learn Here</span>
+                </h2>
+            </div>
+            <div class="row align-items-center">
+                <!-- Left Side List -->
+                <div class="col-lg-6">
+                    <div class="pt_course_list">
+                        <div class="pt_course_item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h4>Frontend: HTML5, CSS3, JavaScript & Bootstrap</h4>
+                        </div>
+                        <div class="pt_course_item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h4>Responsive Design: Mobile-First Layouts & Media Queries</h4>
+                        </div>
+                        <div class="pt_course_item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-vector-pen"></i>
+                            </div>
+                            <h4>UI/UX Design: Color Theory, Typography & Visual Hierarchy</h4>
+                        </div>
+                        <div class="pt_course_item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-palette"></i>
+                            </div>
+                            <h4>Design Tools: Figma, Adobe XD & Canva</h4>
+                        </div>
+                        <div class="pt_course_item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-stars"></i>
+                            </div>
+                            <h4>AI Tools: ChatGPT & Claude for a Faster Design Workflow</h4>
+                        </div>
+                        <div class="pt_course_item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-wordpress"></i>
+                            </div>
+                            <h4>CMS Platform: WordPress Website Building</h4>
+                        </div>
+                        <div class="pt_course_item last-item">
+                            <div class="pt_course_icon">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                            </div>
+                            <h4>Deployment & Portfolio: Hosting, Live Websites & Portfolio Building</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Side Image -->
+                <div class="col-lg-6">
+                    <div class="pt_main_image">
+                        <img src="../assets/what_learn_img.jpeg" alt="Student Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Buttons -->
+        <div class="pt_contact_btns">
+            <a href="tel:+917605913863" class="pt_contact_btn pt_call_btn">
+                <i class="bi bi-telephone-fill"></i>
+            </a>
+            <a href="https://wa.me/917605913863" target="_blank" class="pt_contact_btn pt_whatsapp_btn">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ====== TOOLS SECTION ====== -->
+    <section class="pt_tools_section">
+        <div class="container">
+            <div class="pt_learn_title text-center">
+                <h2 class="pt_title">
+                    Industry Leading
+                    <span class="blue-text pt_curve_text">Designing Tools</span>
+                </h2>
+            </div>
+            <!-- Sub Title -->
+            <div class="pt_tools_subtitle">
+                <span></span>
+                <h3>
+                    with Creative Skills & Modern Technology
+                </h3>
+                <span></span>
+            </div>
+            <!-- Tools Grid -->
+            <div class="row g-4">
+                <!-- BOX 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool1.png" alt="Tool 1">
+                    </div>
+                </div>
+                <!-- BOX 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool2.jpg" alt="Tool 2">
+                    </div>
+                </div>
+                <!-- BOX 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool3.png" alt="Tool 3">
+                    </div>
+                </div>
+                <!-- BOX 4 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool4.jpg" alt="Tool 4">
+                    </div>
+                </div>
+                <!-- BOX 5 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool5.png" alt="Tool 5">
+                    </div>
+                </div>
+                <!-- BOX 6 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool6.webp" alt="Tool 6">
+                    </div>
+                </div>
+                <!-- BOX 7 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool7.webp" alt="Tool 7">
+                    </div>
+                </div>
+                <!-- BOX 8 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool8.webp" alt="Tool 8">
+                    </div>
+                </div>
+
+                <!-- BOX 9 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool9.webp" alt="Tool 9">
+                    </div>
+                </div>
+                <!-- BOX 10 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool10.png" alt="Tool 10">
+                    </div>
+                </div>
+                <!-- BOX 11 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool11.webp" alt="Tool 11">
+                    </div>
+                </div>
+                <!-- BOX 12 -->
+                <div class="col-lg-2 col-md-4 col-sm-4 tool-bx">
+                    <div class="pt_tool_box">
+                        <img src="../assets/tool12.webp" alt="Tool 12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CAREER PATHS SECTION ====== -->
+    <section class="pt_career_paths_sec">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Image -->
+                <div class="col-lg-6">
+                    <div class="pt_career_path_img">
+                        <img src="../assets/career_path_img.png" alt="Career Path Image">
+                    </div>
+                </div>
+                <!-- Right Content -->
+                <div class="col-lg-6">
+                    <div class="pt_learn_title">
+                        <h2 class="pt_title">
+                            Extra Benefits To Boost Your <span class="blue-text pt_curve_text">Career Journey</span>
+                        </h2>
+                        <p>
+                            Get extra support with portfolio building, resume guidance, interview preparation,
+                            freelancing tips, mock interviews, and personalized career advice.
+                        </p>
+                        <div class="pt_course_list">
+                            <div class="pt_course_item">
+                                <div class="pt_course_icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h4>SEO Fundamentals for Web Designers</h4>
+                            </div>
+                            <div class="pt_course_item">
+                                <div class="pt_course_icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h4>Resume Building & Career Preparation</h4>
+                            </div>
+                            <div class="pt_course_item">
+                                <div class="pt_course_icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h4>Freelancing Guidance & Career Opportunities</h4>
+                            </div>
+                            <div class="pt_course_item">
+                                <div class="pt_course_icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h4>Interview Preparation & Practice</h4>
+                            </div>
+                            <div class="pt_course_item">
+                                <div class="pt_course_icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <h4>Portfolio Development & Personal Career Guidance</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ====== CONTACT FORM SECTION ====== -->
+    <section class="pt_contact_section" id="contact-section">
+        <div class="container">
+            <div class="pt_contact_wrapper">
+                <div class="row g-0 align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="pt_contact_left">
+                            <h2 class="pt_title">
+                                Ready to Start Your Web <span class="blue-text pt_curve_text">Design Journey?</span>
+                            </h2>
+                            <p>
+                                Start your creative career with practical web design training and expert guidance.
+                                Connect with us to explore the course and begin learning.
+                            </p>
+                            <div class="pt_contact_box">
+                                <div class="pt_contact_icon">
+                                    <i class="bi bi-telephone-inbound"></i>
+                                </div>
+                                <div class="pt_contact_text">
+                                    <h5>Need any help?</h5>
+                                    <a href="tel:+917605913863">
+                                        <p>+91 76059 13863</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pt_contact_box">
+                                <div class="pt_contact_icon">
+                                    <i class="bi bi-envelope-at-fill"></i>
+                                </div>
+                                <div class="pt_contact_text">
+                                    <h5>Email us anytime</h5>
+                                    <a href="mailto:hr@ppminfotech.com">
+                                        <p>hr@ppminfotech.com</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="pt_contact_right">
+                            <form id="contactForm">
+                                <label class="pt_form_label">Full Name *</label>
+                                <input type="text" class="pt_form_control" id="name" name="name"
+                                    placeholder="Enter Full Name" required>
+
+                                <label class="pt_form_label">Email Address *</label>
+                                <input type="email" class="pt_form_control" id="email" name="email"
+                                    placeholder="Enter Your Mail" required>
+
+                                <label class="pt_form_label">Phone Number *</label>
+                                <input type="tel" class="pt_form_control" id="phone" name="phone"
+                                    placeholder="Mobile Number" required>
+
+                                <label class="pt_form_label">Message *</label>
+                                <textarea class="pt_form_control pt_form_textarea" id="message" name="message"
+                                    placeholder="Write Your Message"></textarea>
+
+                                <button type="submit" id="submitBtn" class="pt_submit_btn pt-btn">
+                                    Submit Now
+                                </button>
+
+                                <div id="successMsg" class="alert alert-success mt-3 d-none">
+                                    Form submitted successfully!
+                                </div>
+
+                                <div id="errorMsg" class="alert alert-danger mt-3 d-none">
+                                    Something went wrong. Please try again.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ACTION BOX SECTION ====== -->
+    <section class="pt_action_box_sec">
+        <div class="container">
+            <div class="pt_action_box">
+                <div class="pt_dot_shape"></div>
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <div class="pt_action_content">
+                            <h2>
+                                New Batch Starts<span style="color: #ff5104;"> 1st November </span>
+                            </h2>
+                            <p>
+                                Learn modern web design through practical training, expert guidance, and real-world
+                                projects. Enroll now for the 1st November batch and secure your seat today with limited
+                                seats available!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Right Button -->
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="pt_action_btn_wrap">
+                            <a href="#contact-section" class="pt_action_btn pt-btn">
+                                Enroll now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER SECTION ====== -->
+    <footer class="pt_footer">
+        <div class="container">
+            <!-- Footer Top -->
+            <div class="pt_footer_wrapper">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pt_footer_col">
+                            <div class="pt_footer_logo">
+                                <a class="navbar-brand logo" href="#">
+                                    <img src="../assets/ppm_infotech_img.png" alt="header-logo">
+                                </a>
+                            </div>
+                            <p class="pt_footer_about">
+                                Modern education platform dedicated to helping
+                                learners grow with high quality online courses
+                                and expert instructors worldwide.
+                            </p>
+                            <div class="pt_social_icons">
+                                <a href="https://www.facebook.com/ppminfotech" target="_blank">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ppminfotech/" target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@PPMInfotech" target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/ppminfotech" target="_blank">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="pt_footer_col">
+                            <h4 class="pt_footer_title">
+                                Company
+                            </h4>
+                            <ul class="pt_footer_links">
+                                <li>
+                                    <a href="#about-section">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#course-info">Courses-Info</a>
+                                </li>
+                                <li>
+                                    <a href="#modules-section">Modules</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-section">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pt_footer_col">
+                            <h4 class="pt_footer_title">
+                                Contact Us
+                            </h4>
+                            <div class="pt_contact_info">
+                                <h6>Phone Number</h6>
+                                <a href="tel:+917605913863"><span>+91 76059 13863</span></a>
+                            </div>
+                            <div class="pt_contact_info">
+                                <h6>Email Address</h6>
+                                <a href="mailto:hr@ppmlms.com"><span>hr@ppminfotech.com</span></a>
+                            </div>
+                            <div class="pt_contact_info">
+                                <h6>Office Address</h6>
+                                <p>
+                                    507, DLF Cyber City, Patia, Bhubaneswar, 751024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pt_footer_col">
+                            <h4 class="pt_footer_title">
+                                Find Us On Map
+                            </h4>
+                            <div class="pt_map_box">
+                                <iframe class="pt_map_frame"
+                                    src="https://www.google.com/maps?q=PPM+Infotech,+DLF+Cybercity,+Patia,+Bhubaneswar&output=embed"
+                                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                    title="PPM Infotech location">
+                                </iframe>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="pt_footer_bottom">
+                <div class="pt_footer_bottom_wrapper">
+                    <!-- Copyright -->
+                    <p class="disc text-center pt_footer_copy"><a href="/" data-discover="true">PPM Infotech </a>-
+                        Copyright 2026. All rights reserved.</p>
+                    <!-- Bottom Links -->
+                    <div class="pt_footer_bottom_links">
+                        <a href="https://ppminfotech.com/term-condition" target="_blank">
+                            Terms of Use
+                        </a>
+                        <a href="https://ppminfotech.com/privacy-policy" target="_blank">
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function openSidebar() {
+            const sidebar = document.getElementById("headerSidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+            const menuButton = document.getElementById("sidebar-menu-btn");
+
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+
+            if (menuButton) {
+                menuButton.setAttribute("aria-expanded", "true");
+            }
+
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById("headerSidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+            const menuButton = document.getElementById("sidebar-menu-btn");
+
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+
+            if (menuButton) {
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+
+            document.body.style.overflow = "";
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeSidebar();
+            }
+        });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Mailjs SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
