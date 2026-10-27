@@ -28,95 +28,231 @@
     <link rel="stylesheet" href="default_style.css">
 
     <!-- Custom CSS Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="responsive.css">
 
 </head>
 
 <body>
-    <header>
-        <!-- ====== TOP HEADER ====== -->
-        <div class="top-header">
-            <div class="container">
-                <div class="top-header-wrapper">
-                    <!-- Left Contact -->
-                    <div class="top-left">
-                        <div class="top-contact">
-                            <i class="bi bi-envelope"></i>
-                            <a href="mailto:hr@ppmlms.com"><span>hr@ppminfotech.com</span></a>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="top-contact">
-                            <i class="bi bi-person-square"></i>
-                            <a href="tel:+917605913863"><span>+91 76059 13863</span></a>
-                        </div>
+    <header class="header">
+        <div class="container header-wraper">
+
+            <!-- Top Action Bar -->
+            <div class="row action-bar py-2">
+                <div class="col-lg-6 col-md-6 col-12 left-action-bar">
+                    Are you ready to grow up your business?
+                    <a href="/contact" class="top-contact ms-2">
+                        Contact Us →
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12 rgt-action-bar text-end">
+                    <a href="mailto:info@ppminfotech.com" class="me-4">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@ppminfotech.com
+                    </a>
+
+                    <a href="tel:+917605913863">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 76059 13863
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav
+                class="navbar-sec navbar navbar-expand-lg navbar-light px-4 py-3 justify-content-between align-items-center">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="/static/training/assets/ppm_infotech_img.png" alt="PPM Infotech Logo" loading="lazy">
+                </a>
+
+                <!-- Menu -->
+                <div class="menu-holder">
+
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navigation Links -->
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/service">Services</a>
+                            </li>
+
+                            <!-- Training Dropdown -->
+                            <li class="nav-item dropdown ppm-menu-drpdn">
+                                <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Training
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="https://ppminfotech.com/fullstack-development-course/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            FullStack Development
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="https://ppminfotech.com/digital-marketing-course/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            Digital Marketing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://ppminfotech.com/web-design-course/"
+                                            target="_blank" rel="noopener noreferrer">
+                                            Web Design
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+
+                        </ul>
                     </div>
-                    <!-- Right Address -->
-                    <div class="top-contact address-contact">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>507, DLF Cyber City, Patia, Bhubaneswar, 751024</span>
+                </div>
+
+                <!-- Right Side Buttons -->
+                <div class="nav-right-btn-sec d-flex justify-content-end align-items-center">
+
+                    <!-- Book a Meeting Button -->
+                    <a href="/contact" class="header-btn custom-btn">
+                        Book a Meeting
+                    </a>
+
+                    <!-- Sidebar Menu Button -->
+                    <button id="sidebar-menu-btn" class="sidebar-menu-btn ms-3" type="button" aria-label="Open sidebar"
+                        aria-expanded="false" onclick="openSidebar()">
+                        <img class="menu-dark" src="/static/training/assets/menu-dark-icon.png" alt="Menu">
+
+                        <img class="menu-light" src="/static/training/assets/menu-t-icon.png" alt="Menu">
+                    </button>
+
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="headerSidebar">
+
+            <!-- Close Button -->
+            <button type="button" class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">
+                ✕
+            </button>
+
+            <div class="sidebar-menu">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="/static/training/assets/ppm_infotech_img.png" alt="PPM Infotech" loading="lazy">
+                </a>
+
+                <div class="sidebar-body mt-4">
+                    <!-- Description -->
+                    <p class="sidebar-desc mt-3">
+                        We help businesses build a strong digital presence, generate quality
+                        leads, and achieve measurable growth through innovative technology
+                        and strategic marketing.
+                    </p>
+
+                    <!-- Contact Information -->
+                    <div class="get-in-tuch">
+
+                        <h3 class="mb-3">Get In Touch</h3>
+
+                        <a href="tel:+61430955534" class="me-4">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            Australia: +61 430 955 534
+                        </a>
+
+                        <a href="tel:+917605913863" class="me-4">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            India: +91 76059 13863
+                        </a>
+
+                        <a href="mailto:info@ppminfotech.com" class="me-4">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            info@ppminfotech.com
+                        </a>
+
+                        <!-- Australia Address -->
+                        <p class="me-4 mt-4 sidebar-p">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <span>Australia: Adelaide, Australia</span>
+                        </p>
+
+                        <!-- Delhi Office -->
+                        <p class="me-4 sidebar-p">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <span>
+                                Delhi Office: 293, Lane No.2,<br>
+                                Saidulajab, Near Saket Metro,<br>
+                                New Delhi - 110030
+                            </span>
+                        </p>
+
+                        <!-- Bhubaneswar Office -->
+                        <p class="me-4 sidebar-p">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <span>
+                                Bhubaneswar Office: 507, DLF Cybercity,<br>
+                                Patia Bhubaneswar - 751024
+                            </span>
+                        </p>
+
                     </div>
+
+                    <!-- Social Media Links -->
+                    <div class="sidebar-social-wrapper">
+
+                        <a href="https://www.facebook.com/ppminfotech" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/ppminfotech/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/ppminfotech" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@PPMInfotech" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
                 </div>
             </div>
         </div>
 
-        <!-- ====== MAIN HEADER ====== -->
-        <div class="main-header" id="mainHeader">
-            <div class="container">
-                <div class="row header-wrapper">
-                    <!-- Logo -->
-                    <a class="navbar-brand logo col-lg-2 col-md-2 col-sm-4 col-5" href="https://ppminfotech.com/">
-                        <img src="../assets/ppm_infotech_img.png" alt="header-logo">
-                    </a>
-                    <!-- Navigation Bar -->
-                    <nav class="navbar navbar-expand-lg col-lg-7 col-md-7 col-sm-4 col-7">
-                        <!-- Mobile Toggle -->
-                        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#mainNavbar">
-                            <i class="bi bi-list"></i>
-                        </button>
-                        <!-- Navbar -->
-                        <div class="collapse navbar-collapse" id="mainNavbar">
-                            <!-- Menu -->
-                            <ul class="navbar-nav mx-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link active dropdown-toggle" href="https://ppminfotech.com">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about-section">
-                                        About
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#course-info">
-                                        Course-info
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#modules-section">
-                                        Modules
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#contact-section">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <!-- Right Buttons -->
-                    <div class="header-right col-lg-3 col-md-3 col-sm-4 ">
-                        <a href="#contact-section" class="register-btn">
-                            Quick Contact
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <main>
