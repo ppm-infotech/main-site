@@ -87,11 +87,11 @@ function Header() {
                       <li>
                         <a
                           className="dropdown-item"
-                          href="https://ppminfotech.com/web-design/"
+                          href="https://ppminfotech.com/web-design-course/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Web Design
+                          Web Designing
                         </a>
                       </li>
 
