@@ -43,7 +43,12 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
 
 //For sticky header js
-const header = document.getElementById("mainHeader");
+// const header = document.getElementById("mainHeader");
+const header = document.querySelector(".header");
+
+if (header) {
+    const headerHeight = header.offsetHeight;
+}
 
 const placeholder = document.createElement("div");
 placeholder.className = "header-placeholder";

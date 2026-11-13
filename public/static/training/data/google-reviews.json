@@ -1,0 +1,97 @@
+
+{
+  "businessName": "PPM Infotech",
+  "averageRating": 4.9,
+  "totalReviews": 12,
+  "googleMapsUrl": "https://maps.app.goo.gl/tqYkGpEFta3PgeUbA",
+  "reviews": [
+    {
+      "id": "review-1",
+      "name": "Deepali dipsikha Chhatar",
+      "rating": 5,
+      "relativeTime": "2 months ago",
+      "reviewCount": "1 review",
+      "text": "The best development company with supportive members .This is the full plate of development ,marketing and trainning programme based firm .thank you PPM INFOTECH for all your support."
+    },
+    {
+      "id": "review-2",
+      "name": "Abhilipsa Muduli",
+      "rating": 5,
+      "relativeTime": "5 months ago",
+      "reviewCount": "1 review",
+      "text": "The team is very professional, cooperative, and quick to respond. They delivered our project on schedule with excellent quality work. For my experience one of the best IT company in bhubaneswar."
+    },
+    {
+      "id": "review-3",
+      "name": "Biswajit Roul",
+      "rating": 5,
+      "relativeTime": "6 months ago",
+      "reviewCount": "6 reviews·3 photos",
+      "text": "Excellent web development team. They took our complex vision and turned it into a sleek, fast, and user-friendly website. Fantastic results from their digital marketing campaigns. Our ROI has increased significantly thanks to their SEO strategies and targeted ad management."
+    },
+    {
+      "id": "review-4",
+      "name": "Soumya Shaswati Dash",
+      "rating": 5,
+      "relativeTime": "6 months ago",
+      "reviewCount": "1 reviews",
+      "text": "The team is supportive, professional, and truly employee-oriented. The workplace is friendly, secure, and encourages learning, growth, and confidence. Working with this company has been a great experience."
+    },
+    {
+      "id": "review-5",
+      "name": "Rahul Samal",
+      "rating": 5,
+      "relativeTime": "6 months ago",
+      "reviewCount": "1 reviews·3 photos",
+      "text": "Very good company best for web design and digital marketing."
+    },
+    {
+      "id": "review-6",
+      "name": "Subhadeep sahoo",
+      "rating": 5,
+      "relativeTime": "8 months ago",
+      "reviewCount": "1 reviews",
+      "text": "Excellent IT company in Bhubaneswar. The team is highly professional, responsive, and delivered our project on time. Their technical expertise and support were outstanding. Highly recommended for anyone looking for reliable IT services."
+    },
+    {
+      "id": "review-7",
+      "name": "Biswajit Natha Sharma",
+      "rating": 5,
+      "relativeTime": "6 months ago",
+      "reviewCount": "6 reviews·3 photos",
+      "text": "A top digital marketing firm in Bhubaneswar; from my experience working here, the professionalism and organized workflow really stand out."
+    },
+    {
+      "id": "review-8",
+      "name": "Uday Pal",
+      "rating": 5,
+      "relativeTime": "6 months ago",
+      "reviewCount": "6 reviews",
+      "text": "best IT consulting company for web design, development & digital marketing services. thank you PPM Infotech."
+    },
+    {
+      "id": "review-9",
+      "name": "Gyanesh Nageswar",
+      "rating": 5,
+      "relativeTime": "a months ago",
+      "reviewCount": "",
+      "text": "Best it company."
+    },
+    {
+      "id": "review-10",
+      "name": "Pratyush Sharma",
+      "rating": 5,
+      "relativeTime": "3 months ago",
+      "reviewCount": "3 reviews ",
+      "text": "Great Environment and Great Experience!"
+    },
+    {
+      "id": "review-11",
+      "name": "kakadiya Shital",
+      "rating": 5,
+      "relativeTime": "2 months ago",
+      "reviewCount": "6 reviews·3 photos",
+      "text": "Best full stack development training provider, digital marketing company. Excellent experience"
+    }
+  ]
+}
