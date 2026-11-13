@@ -1184,7 +1184,7 @@ table td:nth-child(3) {
 
 /* =========== FOOTER SECTION =========== */
 .pt_footer {
-    background-image: url(../assets/bg12.jpeg);
+    background-image: url(/static/training/assets/bg12.jpeg);
     border-top: 1px solid #dedfdf;
 }
 
