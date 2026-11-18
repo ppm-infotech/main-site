@@ -492,6 +492,14 @@
         font-size: 26px;
     }
 
+    .pt_cta_box {
+        padding-top: 401px !important;
+    }
+
+    .pt_cta_subtitle {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 580px) {
