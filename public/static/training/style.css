@@ -213,7 +213,7 @@
     }
 
     .navbar-brand {
-        width: 15% !important;
+        width: 15%;
     }
 
     .nav-item {
@@ -323,6 +323,12 @@
     .menu-holder {
         width: fit-content;
     }
+
+    .navbar-brand {
+        width: 37%;
+    }
+
+    
 }
 
 /* Small mobile devices */
