@@ -792,7 +792,7 @@
     border: none;
     background: #4583e040;
     color: var(--title-color);
-    padding: 14px 35px;
+    padding: 14px 35px !important;
     font-weight: 600;
     border-radius: 8px;
     transition: 0.4s;
