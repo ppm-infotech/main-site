@@ -479,6 +479,19 @@
         padding: 14px 18px;
     }
 
+    .pt_titl_wrapper h2 {
+        font-size: 26px;
+    }
+
+    .pt_action_box {
+        border-radius: 12px;
+        padding: 28px 18px;
+    }
+
+    .pt_action_content h2 {
+        font-size: 26px;
+    }
+
 }
 
 @media only screen and (max-width: 580px) {
