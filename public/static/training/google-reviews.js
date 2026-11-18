@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("average-rating").textContent =
             `${data.averageRating} ★`;
 
-        document.getElementById("total-reviews").textContent =
-            `${data.totalReviews.toLocaleString()} Reviews`;
+        // document.getElementById("total-reviews").textContent =
+        //     `${data.totalReviews.toLocaleString()} Reviews`;
 
         document.getElementById("google-review-link").href =
             data.googleMapsUrl;

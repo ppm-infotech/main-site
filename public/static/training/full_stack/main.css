@@ -1,43 +1,52 @@
 /* =========== HERO SECTION =========== */
 
-.hero-banner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+.header-btn {
+    word-spacing: 6px;
 }
 
-.hero-banner>img {
+.hero-banner {
+    overflow: hidden;
+    z-index: 1;
     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+    background: url(/static/training/assets/Banner-Background-Image.png);
+    padding: 0;
+    margin-top: -170px;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-content-box {
-    position: absolute;
-    top: calc(50% + 70px);
-    left: 50px;
     transform: translateY(-50%);
-    width: 60%;
-    max-width: 750px;
+    top: calc(50% + 70px);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content-box img {
+    height: 360px;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom right;
 }
 
 .hero-content-box h2 {
-    font-size: clamp(36px, 4.2vw, 56px);
+    font-size: 52px;
     font-weight: 800;
 }
 
 .hero-content-box .hero-title-1 {
     color: #ff4d00;
     border-radius: 10px;
-    font-size: clamp(30px, 3.8vw, 50px);
+    font-size: 48px;
     word-spacing: 10px;
     text-transform: uppercase;
 }
 
 .hero-content-box .hero-title-2 {
-    font-size: clamp(30px, 3.4vw, 50px);
-    font-weight: 600;
+    font-size: 44px;
+    font-weight: 700;
 }
 
 .hero-content-box p {
@@ -65,267 +74,301 @@
     margin-right: 8px;
 }
 
-/* Large screens */
-@media (min-width: 1200px) {
-    .hero-content-box {
-        left: 5%;
-        width: 60%;
-    }
-}
+/* Download Syllabus POPUP */
 
-/* Medium screens */
-@media (max-width: 991px) {
-    .hero-content-box {
-        left: 4%;
-        width: 65%;
-    }
+/* ================================
+   PREMIUM SYLLABUS POPUP
+================================ */
 
-    .hero-content-box h2 {
-        margin-bottom: 10px;
-    }
+.syllabus-popup-overlay {
+    position: fixed !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
 
-    .banner-tag-box {
-        padding: 9px 12px;
-    }
-}
-
-/* Small screens */
-@media (max-width: 767px) {
-    .hero-content-box {
-        left: 4%;
-        width: 65%;
-    }
-
-    .hero-content-box h2 {
-        font-size: 25px;
-    }
-
-    .hero-content-box .hero-title-1 {
-        font-size: 23px;
-        word-spacing: 3px;
-    }
-
-    .hero-content-box .hero-title-2 {
-        font-size: 20px;
-    }
-
-    .hero-content-box p {
-        font-size: 12px;
-    }
-
-    .banner-tag-box {
-        padding: 7px 10px;
-        font-size: 10px;
-    }
-
-    .banner-tag-box i {
-        font-size: 14px;
-    }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-    .hero-content-box {
-        left: 3%;
-        width: 72%;
-    }
-
-    .hero-content-box h2 {
-        font-size: 19px;
-    }
-
-    .hero-content-box .hero-title-1 {
-        font-size: 18px;
-        word-spacing: 2px;
-    }
-
-    .hero-content-box .hero-title-2 {
-        font-size: 16px;
-    }
-
-    .hero-content-box p {
-        font-size: 10px;
-        line-height: 1.4;
-    }
-
-    .banner-tag-box {
-        padding: 5px 8px;
-        font-size: 8px;
-    }
-
-    .banner-tag-box i {
-        font-size: 11px;
-        margin-right: 3px;
-    }
-}
-
-
-
-
-
-
-
-.header-btn {
-    word-spacing: 6px;
-}
-
-.hero-banner {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    /* background: #d8deff; */
-    padding: 0;
-    margin-top: -170px;
-}
-
-/* Left Side */
-.hero-content {
-    position: relative;
-    z-index: 5;
-}
-
-.hero-content h1 {
-    font-size: 52px;
-    line-height: 1.1;
-    margin-bottom: 42px;
-    color: var(--title-color);
-    font-weight: 800;
-}
-
-.bold-text {
-    font-weight: 800;
-}
-
-.blue-text {
-    color: var(--primary-color);
-    position: relative;
-}
-
-.blue-big {
-    color: var(--primary-color);
-    font-weight: 800;
-}
-
-.hero-content p {
-    color: #363637;
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.pt_hero_titl_wrapper {
-    position: relative;
-}
-
-.pt_title_curve_line {
-    position: absolute;
-    bottom: -17px;
-    left: 0;
-}
-
-/* Right Side */
-.hero-image-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: end;
+    display: none;
+    justify-content: center;
     align-items: center;
-}
 
-@keyframes zoomEffect {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.05);
-    }
-}
-
-/* Main Image */
-.main-student {
-    position: relative;
-    z-index: 3;
-    width: 530px;
-    height: 380px;
-    border: 2px solid #ff5c15;
-    border-radius: 3px 85px;
-    animation: floatImage 4s ease-in-out infinite;
-    object-fit: cover;
-    object-position: center center;
-    overflow: hidden;
-}
-
-@keyframes floatImage {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* Floating Card */
-.floating-card {
-    position: absolute;
-    top: 272px;
-    right: 0;
-    background: #ffffff;
-    width: 260px;
     padding: 20px;
-    border-radius: 3px 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    z-index: 3;
-    animation: cardMove 4s infinite alternate;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: rgba(5, 7, 12, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 9999999;
 }
 
-@keyframes cardMove {
+.syllabus-popup-overlay.active {
+    display: flex;
+}
+
+/* Main Popup */
+.syllabus-popup {
+    top: 100px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px 23px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    background: radial-gradient(circle at 100% 0%,
+            rgba(255, 116, 31, 0.24),
+            transparent 38%),
+        linear-gradient(145deg,
+            #17191f 0%,
+            #101116 60%,
+            #24160f 100%);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65),
+        0 0 45px rgba(255, 112, 35, 0.10);
+    animation: premiumPopupIn 0.45s cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes premiumPopupIn {
     from {
-        transform: translateY(0px);
+        opacity: 0;
+        transform: translateY(35px) scale(0.94);
     }
 
     to {
-        transform: translateY(-10px);
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
-.student-users {
+/* Decorative Orange Circles */
+.syllabus-popup::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+
+    top: -145px;
+    right: -90px;
+
+    background: rgba(255, 130, 58, 0.16);
+    border: 1px solid rgba(255, 166, 102, 0.18);
+
+    box-shadow: 0 0 70px rgba(255, 112, 35, 0.12);
+    z-index: -1;
+}
+
+.syllabus-popup::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+
+    bottom: -120px;
+    left: -90px;
+
+    background: rgba(255, 143, 75, 0.13);
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.syllabus-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.circle-one {
+    width: 12px;
+    height: 12px;
+    top: 105px;
+    right: 65px;
+    background: #ff974f;
+    box-shadow: 0 0 20px #ff974f;
+}
+
+.circle-two {
+    width: 8px;
+    height: 8px;
+    bottom: 90px;
+    right: 55px;
+    background: #ffb37b;
+    box-shadow: 0 0 18px #ff974f;
+}
+
+/* Close Button */
+.syllabus-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 10;
+
+    transition: all 0.3s ease;
+}
+
+.syllabus-close:hover {
+    background: #f47727;
+    border-color: #f47727;
+    transform: rotate(90deg);
+}
+
+/* Popup Content */
+.syllabus-popup-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Icon */
+.syllabus-icon {
+    width: 78px;
+    height: 78px;
+
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    justify-content: center;
+
+    margin: 0 auto 24px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(145deg,
+            #ffad68,
+            #ff741f);
+
+    color: #ffffff;
+    font-size: 34px;
+
+    box-shadow:
+        0 10px 30px rgba(255, 112, 31, 0.28),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
-.student-users img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    margin-left: -10px;
-}
-
-.student-users img:first-child {
-    margin-left: 0;
-}
-
-.floating-card h4 {
-    color: var(--primary-color);
-    font-size: 30px;
+/* Heading */
+.syllabus-popup h2 {
+    color: #ffffff;
+    font-size: 35px;
     font-weight: 800;
+    line-height: 1.25;
+
+    margin: 20px 0 14px;
 }
 
-.floating-card p {
-    color: var(--title-color);
-    font-size: 19px;
-    font-weight: 600;
-    margin-bottom: 0;
+.syllabus-popup h2 span {
+    display: block;
+    color: #ff873a;
 }
+
+/* Description */
+.syllabus-popup p {
+    max-width: 420px;
+    margin: 0 auto 26px;
+
+    color: #b9bbc5;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Register Button */
+.syllabus-register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    padding: 17px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+
+    background: linear-gradient(100deg,
+            #ff9d50,
+            #f15a24);
+
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow: 0 10px 30px rgba(255, 100, 30, 0.22);
+
+    transition: all 0.3s ease;
+}
+
+.syllabus-register-btn:hover {
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 100, 30, 0.38);
+}
+
+.syllabus-register-btn i {
+    transition: transform 0.3s ease;
+}
+
+.syllabus-register-btn:hover i {
+    transform: translateX(5px);
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Mobile Responsive */
+@media(max-width: 576px) {
+
+    .syllabus-popup {
+        padding: 45px 22px 30px;
+        border-radius: 19px;
+    }
+
+    .syllabus-popup h2 {
+        font-size: 27px;
+    }
+
+    .syllabus-popup p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .syllabus-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 28px;
+    }
+
+    .syllabus-tag {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .syllabus-register-btn {
+        font-size: 13px;
+        padding: 15px 12px;
+    }
+}
+
+
+
+
 
 /* ========== CALL TO ACTION SECTION ========== */
 .pt_action_box_sec1 {
@@ -382,14 +425,13 @@
     border-radius: 8px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
     padding: 25px 40px;
-    overflow: hidden;
-    position: absolute;
-    top: -82px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     z-index: 9;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    margin-top: -200px;
+    margin-bottom: 47px;
+    z-index: 3;
 }
 
 .pt_action_box1 p {
@@ -590,7 +632,7 @@
 /* ========== COURSE DETAILS & ENROLLMENT SECTION ========== */
 .pt_course_section {
     padding: 70px 0;
-    margin: 70px 0 10px;
+    margin: 70px 0 0px;
     background: #42e48b40;
 }
 
@@ -1368,7 +1410,7 @@ table td:nth-child(3) {
 
 /* Footer Titles */
 .pt_footer_title {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #ff611d;
@@ -1546,7 +1588,7 @@ table td:nth-child(3) {
     background: linear-gradient(90deg, #020846, #0039da);
     border-radius: 16px;
     padding: 44px 54px;
-    padding-top: 177px;
+    padding-top: 100px;
 }
 
 .pt_cta_subtitle {

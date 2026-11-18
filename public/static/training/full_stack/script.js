@@ -4,7 +4,7 @@ emailjs.init({
     publicKey: "1NGBx9jfq_2q4pffw"
 });
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const submitBtn = document.getElementById("submitBtn");
@@ -16,28 +16,28 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         "template_yyp5y91",
         this
     )
-    .then(() => {
+        .then(() => {
 
-        document.getElementById("successMsg").classList.remove("d-none");
-        document.getElementById("errorMsg").classList.add("d-none");
+            document.getElementById("successMsg").classList.remove("d-none");
+            document.getElementById("errorMsg").classList.add("d-none");
 
-        this.reset();
+            this.reset();
 
-    })
-    .catch((error) => {
+        })
+        .catch((error) => {
 
-        document.getElementById("errorMsg").classList.remove("d-none");
-        document.getElementById("successMsg").classList.add("d-none");
+            document.getElementById("errorMsg").classList.remove("d-none");
+            document.getElementById("successMsg").classList.add("d-none");
 
-        console.error(error);
+            console.error(error);
 
-    })
-    .finally(() => {
+        })
+        .finally(() => {
 
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Submit";
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Submit";
 
-    });
+        });
 });
 
 
@@ -69,5 +69,53 @@ window.addEventListener("scroll", function () {
         placeholder.classList.remove("active");
 
     }
+});
 
+
+// Download syllabus popup
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const openBtn = document.getElementById("downloadSyllabusBtn");
+    const popup = document.getElementById("syllabusPopup");
+    const closeBtn = document.getElementById("closeSyllabusPopup");
+
+    if (!openBtn || !popup || !closeBtn) return;
+
+    // Open popup
+    openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        popup.classList.add("active");
+        document.body.style.overflow = "hidden";
+    });
+
+    // Close popup
+    function closePopup() {
+        popup.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closePopup);
+
+    // Close on outside click
+    popup.addEventListener("click", function (e) {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && popup.classList.contains("active")) {
+            closePopup();
+        }
+    });
+    const registerBtn = document.getElementById("syllabusRegisterBtn");
+
+    if (registerBtn) {
+        registerBtn.addEventListener("click", function () {
+            closePopup();
+        });
+    }
 });
