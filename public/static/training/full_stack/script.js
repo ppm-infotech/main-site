@@ -73,7 +73,6 @@ window.addEventListener("scroll", function () {
 
 
 // Download syllabus popup
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const openBtn = document.getElementById("downloadSyllabusBtn");

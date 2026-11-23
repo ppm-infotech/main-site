@@ -10,7 +10,7 @@
     width: 100%;
     background: url(/static/training/assets/Banner-Background-Image.png);
     padding: 0;
-    margin-top: -170px;
+    margin-top: -125px;
     height: 800px;
     background-position: center;
     background-size: cover;
@@ -19,7 +19,7 @@
 
 .hero-content-box {
     transform: translateY(-50%);
-    top: calc(50% + 70px);
+    top: calc(50% + 130px);
     position: relative;
     z-index: 2;
 }
