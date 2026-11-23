@@ -39,3 +39,50 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
         });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const openBtn = document.getElementById("downloadSyllabusBtn");
+    const popup = document.getElementById("syllabusPopup");
+    const closeBtn = document.getElementById("closeSyllabusPopup");
+
+    if (!openBtn || !popup || !closeBtn) return;
+
+    // Open popup
+    openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        popup.classList.add("active");
+        document.body.style.overflow = "hidden";
+    });
+
+    // Close popup
+    function closePopup() {
+        popup.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closePopup);
+
+    // Close on outside click
+    popup.addEventListener("click", function (e) {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && popup.classList.contains("active")) {
+            closePopup();
+        }
+    });
+    const registerBtn = document.getElementById("syllabusRegisterBtn");
+
+    if (registerBtn) {
+        registerBtn.addEventListener("click", function () {
+            closePopup();
+        });
+    }
+});
